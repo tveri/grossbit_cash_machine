@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Чек</title>
+  </head>
+  <body>
+    <style>
+      * {
+        font-size: 10vw;
+      }
+    </style>
+    <header>
+      <div>ООО "КОМПАНИЯ К"</div>
+      <div>Добро пожаловать</div>
+      <div>ККМ 00075411 &nbsp;&nbsp;&nbsp; #3969</div>
+      <div>ИНН 1087746942040</div>
+      <div>&nbsp;&nbsp;&nbsp;&nbsp; ЭКЛЗ 3851495566</div>
+      <div>{{ time }} СИС.</div>
+      <div>&nbsp; АДМИ</div>
+    </header>
+    <main>
+      {% for product in products %}
+      <div>
+        <div>{{ product.title }}</div>
+        <div>
+          &nbsp;&nbsp;{{ product.count }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;={{ product.price }}
+        </div>
+      </div>
+      {% endfor %}
+    </main>
+    <br />
+    <br />
+    <footer>
+      <div>
+        <b>ИТОГ</b>
+      </div>
+      <div><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ cost }}</b></div>
+      <div>НАЛИЧНЫМИ&nbsp;&nbsp;&nbsp;&nbsp;={{ cost }}</div>
+      <div>*****************************</div>
+      <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0003751#&nbsp;05970</div>
+    </footer>
+  </body>
+</html>
